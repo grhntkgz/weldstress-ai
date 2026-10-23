@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.rst
+*.db
+*.lock
+research-source/
+derived-data/
+verification-result.json
