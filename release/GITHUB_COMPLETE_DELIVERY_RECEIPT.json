@@ -1,0 +1,321 @@
+{
+  "status": "PASS_ALL_CURATED_ASSETS_UPLOADED_AND_REMOTE_SHA256_VERIFIED",
+  "timestamp_UTC": "2026-10-24T09:06:52.456818+00:00",
+  "repository": "grhntkgz/weldstress-ai",
+  "private": true,
+  "release_tag": "reproducibility-2026-10-24",
+  "release_url": "https://github.com/grhntkgz/weldstress-ai/releases/tag/reproducibility-2026-10-24",
+  "release_id": 422589896,
+  "target_commit": "8ff92d44a5a4a8d7e17d93af19821b13c33da4e2",
+  "asset_count": 33,
+  "asset_bytes": 8558341496,
+  "retained_files": 7716,
+  "retained_uncompressed_bytes": 17668829985,
+  "assets": [
+    {
+      "name": "ASSET_MANIFEST.json",
+      "asset_id": 671653492,
+      "bytes": 7047,
+      "SHA256": "fcbd1596f17c3cdb19023e81a262c299b844eb36fcd26d6126e0d641abe20704",
+      "remote_digest": "sha256:fcbd1596f17c3cdb19023e81a262c299b844eb36fcd26d6126e0d641abe20704",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/ASSET_MANIFEST.json"
+    },
+    {
+      "name": "ARTIFACT_MANIFEST.csv",
+      "asset_id": 671653504,
+      "bytes": 3094503,
+      "SHA256": "2012fb9da5bfa35b1dbc1121949f32db74e6412756da7621d02e88d5c2db72c9",
+      "remote_digest": "sha256:2012fb9da5bfa35b1dbc1121949f32db74e6412756da7621d02e88d5c2db72c9",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/ARTIFACT_MANIFEST.csv"
+    },
+    {
+      "name": "models-01.zip",
+      "asset_id": 671653519,
+      "bytes": 6469918,
+      "SHA256": "d5976f330c8fcaab76fd44f77446808e38e09a9f4b5e152a5078d2e0798cad55",
+      "remote_digest": "sha256:d5976f330c8fcaab76fd44f77446808e38e09a9f4b5e152a5078d2e0798cad55",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/models-01.zip"
+    },
+    {
+      "name": "manuscript-01.zip",
+      "asset_id": 671653616,
+      "bytes": 54211280,
+      "SHA256": "30147fa5801042c434f96f67c0bd28658061b6dc19f9219baec66f7f05d94061",
+      "remote_digest": "sha256:30147fa5801042c434f96f67c0bd28658061b6dc19f9219baec66f7f05d94061",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/manuscript-01.zip"
+    },
+    {
+      "name": "fe-support-06.zip",
+      "asset_id": 671653987,
+      "bytes": 143799559,
+      "SHA256": "169e34f6e4615ebc3ab901b2152c859dbf17684077865d1d257a18c94a729ac9",
+      "remote_digest": "sha256:169e34f6e4615ebc3ab901b2152c859dbf17684077865d1d257a18c94a729ac9",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-06.zip"
+    },
+    {
+      "name": "methods-results-01.zip",
+      "asset_id": 671653862,
+      "bytes": 160652534,
+      "SHA256": "6238f0a984610c5c220f8d9cc21873133d1860e6fedd851571a5cc1e6e4f02aa",
+      "remote_digest": "sha256:6238f0a984610c5c220f8d9cc21873133d1860e6fedd851571a5cc1e6e4f02aa",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/methods-results-01.zip"
+    },
+    {
+      "name": "predictions-01.zip",
+      "asset_id": 671656658,
+      "bytes": 174787231,
+      "SHA256": "af834ac98de8dd5fae41403ac7066c4e7c26683f5c9023537f97bda6be171182",
+      "remote_digest": "sha256:af834ac98de8dd5fae41403ac7066c4e7c26683f5c9023537f97bda6be171182",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/predictions-01.zip"
+    },
+    {
+      "name": "fe-support-01.zip",
+      "asset_id": 671635159,
+      "bytes": 243796220,
+      "SHA256": "9bf35f740c00ad49705e3a48d6d4d99351ee1b2fe77ff1b7faf7516b58849220",
+      "remote_digest": "sha256:9bf35f740c00ad49705e3a48d6d4d99351ee1b2fe77ff1b7faf7516b58849220",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-01.zip"
+    },
+    {
+      "name": "fe-recovery-arrays-01.zip",
+      "asset_id": 671662078,
+      "bytes": 189737909,
+      "SHA256": "cd2ea4e41af6b17d9624d9f88b6f9787aecd2fb1463472b17b4faf95d33df972",
+      "remote_digest": "sha256:cd2ea4e41af6b17d9624d9f88b6f9787aecd2fb1463472b17b4faf95d33df972",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-recovery-arrays-01.zip"
+    },
+    {
+      "name": "geometry-targets-04.zip",
+      "asset_id": 671662692,
+      "bytes": 229450467,
+      "SHA256": "6d0ab6a737f98965cde366d29295cac51264bfffd0ddb2f2e1d6013087369989",
+      "remote_digest": "sha256:6d0ab6a737f98965cde366d29295cac51264bfffd0ddb2f2e1d6013087369989",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/geometry-targets-04.zip"
+    },
+    {
+      "name": "features-01.zip",
+      "asset_id": 671666312,
+      "bytes": 255377802,
+      "SHA256": "6cb44a5dd6517fdccb45651eac0d41ac4539c08f945903c623ef029f76a7b628",
+      "remote_digest": "sha256:6cb44a5dd6517fdccb45651eac0d41ac4539c08f945903c623ef029f76a7b628",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/features-01.zip"
+    },
+    {
+      "name": "fe-support-03.zip",
+      "asset_id": 671670723,
+      "bytes": 261172556,
+      "SHA256": "160815966a30ccb54dbd4920ea962c837fc8589cf8bd35eb9e4843e59d2b4627",
+      "remote_digest": "sha256:160815966a30ccb54dbd4920ea962c837fc8589cf8bd35eb9e4843e59d2b4627",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-03.zip"
+    },
+    {
+      "name": "fe-support-04.zip",
+      "asset_id": 671673273,
+      "bytes": 289004915,
+      "SHA256": "cd3ac1e9b74cf8320a35307518a6e9a85b59651bdb141fe3a35799d1c908e4a8",
+      "remote_digest": "sha256:cd3ac1e9b74cf8320a35307518a6e9a85b59651bdb141fe3a35799d1c908e4a8",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-04.zip"
+    },
+    {
+      "name": "fe-support-05.zip",
+      "asset_id": 671679871,
+      "bytes": 292161525,
+      "SHA256": "2e664098df58d0c7ac3b5ccc504bdf34b91b4180e813d58acbc806243b5bce78",
+      "remote_digest": "sha256:2e664098df58d0c7ac3b5ccc504bdf34b91b4180e813d58acbc806243b5bce78",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-05.zip"
+    },
+    {
+      "name": "geometry-targets-01.zip",
+      "asset_id": 671685807,
+      "bytes": 297898169,
+      "SHA256": "3a6efebbe896cbf8ad108c46ffed45c4210fa088c50a7bc28336e900d2912ea2",
+      "remote_digest": "sha256:3a6efebbe896cbf8ad108c46ffed45c4210fa088c50a7bc28336e900d2912ea2",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/geometry-targets-01.zip"
+    },
+    {
+      "name": "fe-support-02.zip",
+      "asset_id": 671642132,
+      "bytes": 303409600,
+      "SHA256": "a152fbe4188cbde4f48ccc3f0db530a6e0ef173b00b6c73d93e66f87049cfe14",
+      "remote_digest": "sha256:a152fbe4188cbde4f48ccc3f0db530a6e0ef173b00b6c73d93e66f87049cfe14",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/fe-support-02.zip"
+    },
+    {
+      "name": "geometry-targets-02.zip",
+      "asset_id": 671689168,
+      "bytes": 299044624,
+      "SHA256": "99e3c780216157d41776ba8ca0d1b36c3a3046254785bd22d7c01b99023335bc",
+      "remote_digest": "sha256:99e3c780216157d41776ba8ca0d1b36c3a3046254785bd22d7c01b99023335bc",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/geometry-targets-02.zip"
+    },
+    {
+      "name": "geometry-targets-03.zip",
+      "asset_id": 671696199,
+      "bytes": 299858768,
+      "SHA256": "585ad8f8ce4c4942f4a7f24ba9745a8693711f227e0f5744aa1316fd7ebcd593",
+      "remote_digest": "sha256:585ad8f8ce4c4942f4a7f24ba9745a8693711f227e0f5744aa1316fd7ebcd593",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/geometry-targets-03.zip"
+    },
+    {
+      "name": "native-G08-V1-S355-AW-01.zip",
+      "asset_id": 671701235,
+      "bytes": 314727307,
+      "SHA256": "eaa100b0e1a3080792e71b55964c5c9690159ef7d74b9dd5e3963356d8320f06",
+      "remote_digest": "sha256:eaa100b0e1a3080792e71b55964c5c9690159ef7d74b9dd5e3963356d8320f06",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-G08-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-G07-V1-S355-AW-01.zip",
+      "asset_id": 671703236,
+      "bytes": 316253590,
+      "SHA256": "1f737e7cae30be38d8d3ed2d74619a6398da6b2ce72ce39727e6490dbe724ecd",
+      "remote_digest": "sha256:1f737e7cae30be38d8d3ed2d74619a6398da6b2ce72ce39727e6490dbe724ecd",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-G07-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-X10-V1-S355-AW-01.zip",
+      "asset_id": 671709390,
+      "bytes": 316463504,
+      "SHA256": "a22db390d97b48d4604297f6947bc73cde76365d1ef54b75e6592fa5340dfdb2",
+      "remote_digest": "sha256:a22db390d97b48d4604297f6947bc73cde76365d1ef54b75e6592fa5340dfdb2",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-X10-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-X23-V1-S355-AW-01.zip",
+      "asset_id": 671718272,
+      "bytes": 318043667,
+      "SHA256": "83d6df1c82a5c3afa99d9406604261c1c2342653af67724c0b1982aaa3fe689a",
+      "remote_digest": "sha256:83d6df1c82a5c3afa99d9406604261c1c2342653af67724c0b1982aaa3fe689a",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-X23-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-G16-V1-S355-AW-01.zip",
+      "asset_id": 671722128,
+      "bytes": 321763906,
+      "SHA256": "ff0a76e15987c9183cca98b2efe43e88ad0398f053db683505d7c47f0787fd66",
+      "remote_digest": "sha256:ff0a76e15987c9183cca98b2efe43e88ad0398f053db683505d7c47f0787fd66",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-G16-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "figures-01.zip",
+      "asset_id": 671727991,
+      "bytes": 322002122,
+      "SHA256": "5c01cc785bb8664566174b4a0586006af98998bde5d1439f3d2e5fd1d67027ef",
+      "remote_digest": "sha256:5c01cc785bb8664566174b4a0586006af98998bde5d1439f3d2e5fd1d67027ef",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/figures-01.zip"
+    },
+    {
+      "name": "native-G04-V1-S355-AW-01.zip",
+      "asset_id": 671734499,
+      "bytes": 322750180,
+      "SHA256": "676682fd80f1dbae070423a32aba6ca3c6c64219c368fbc190194c13e7b5452c",
+      "remote_digest": "sha256:676682fd80f1dbae070423a32aba6ca3c6c64219c368fbc190194c13e7b5452c",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-G04-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-H19-V1-S355-AW-01.zip",
+      "asset_id": 671737697,
+      "bytes": 326303008,
+      "SHA256": "39cddeb75b96142fe90fd2a5a60e399ed81a4625784882194c4cfcd3b3b036d0",
+      "remote_digest": "sha256:39cddeb75b96142fe90fd2a5a60e399ed81a4625784882194c4cfcd3b3b036d0",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-H19-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-E21-V1-S355-AW-01.zip",
+      "asset_id": 671743366,
+      "bytes": 326637431,
+      "SHA256": "a58e8bacf0a0b5d2253734c266b2ff58c4db320e0b62d622a535be43f0fc9e8f",
+      "remote_digest": "sha256:a58e8bacf0a0b5d2253734c266b2ff58c4db320e0b62d622a535be43f0fc9e8f",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-E21-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-C16-V1-S355-AW-01.zip",
+      "asset_id": 671751937,
+      "bytes": 327410370,
+      "SHA256": "1cfc30c15af5fe1f8a411e9d63f87696871adf40806ca58eba700e1de9a86419",
+      "remote_digest": "sha256:1cfc30c15af5fe1f8a411e9d63f87696871adf40806ca58eba700e1de9a86419",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-C16-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-G25-V1-S355-AW-01.zip",
+      "asset_id": 671756384,
+      "bytes": 327546265,
+      "SHA256": "7e64f02f3be99b06e212b54374bd3dbcc2677990b4a7240201a37e2a3ba6e021",
+      "remote_digest": "sha256:7e64f02f3be99b06e212b54374bd3dbcc2677990b4a7240201a37e2a3ba6e021",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-G25-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-H12-V1-S355-AW-01.zip",
+      "asset_id": 671761345,
+      "bytes": 328524472,
+      "SHA256": "9ff466ddd335ae35eacee8235d79e9e38c226636fa7d7840fd8d9832cdcd711b",
+      "remote_digest": "sha256:9ff466ddd335ae35eacee8235d79e9e38c226636fa7d7840fd8d9832cdcd711b",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-H12-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "factorial-01.zip",
+      "asset_id": 671621254,
+      "bytes": 521009437,
+      "SHA256": "6a0f3eb9b25d06d89e050a852dca92f4d82735246eabac5a2bf6bc2371595db2",
+      "remote_digest": "sha256:6a0f3eb9b25d06d89e050a852dca92f4d82735246eabac5a2bf6bc2371595db2",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/factorial-01.zip"
+    },
+    {
+      "name": "native-C05-V1-S355-AW-01.zip",
+      "asset_id": 671771397,
+      "bytes": 331864107,
+      "SHA256": "80c948906ecf1935c6bdf62298b12f47cfc029dbb285b3866e9f7986656bf716",
+      "remote_digest": "sha256:80c948906ecf1935c6bdf62298b12f47cfc029dbb285b3866e9f7986656bf716",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-C05-V1-S355-AW-01.zip"
+    },
+    {
+      "name": "native-C02-V1-S355-AW-01.zip",
+      "asset_id": 671775045,
+      "bytes": 333107503,
+      "SHA256": "9bf3435876c8d3c1032d8a58c7805514abe233c31545b825e137deef549e5d8e",
+      "remote_digest": "sha256:9bf3435876c8d3c1032d8a58c7805514abe233c31545b825e137deef549e5d8e",
+      "status": "REMOTE_SHA256_MATCH",
+      "url": "https://github.com/grhntkgz/weldstress-ai/releases/download/reproducibility-2026-10-24/native-C02-V1-S355-AW-01.zip"
+    }
+  ],
+  "new_research_runs": 0,
+  "public_access": false,
+  "clean_end_to_end_execution": "NOT TESTED",
+  "full_raw_dataset_redistribution": false,
+  "postpublication_asset_recheck": "PASS",
+  "repository_auxiliary_files": 60,
+  "total_retained_artifact_files": 7776,
+  "fresh_remote_model_archive_download": "PASS_SHA256_AND_35_MEMBER_RESTORE"
+}

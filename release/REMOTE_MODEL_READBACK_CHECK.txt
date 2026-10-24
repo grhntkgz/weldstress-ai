@@ -1,0 +1,12 @@
+DOWNLOADED_AND_VERIFIED models-01.zip
+COMPLETE. Next run tools/verify_and_restore.py; no research entry points were executed.
+
+VERIFIED models-01.zip 35
+{
+  "status": "PASS",
+  "verified_files": 35,
+  "assets": 1,
+  "selection": "models-*",
+  "restored_to": "E:\\welding\\outputs\\WeldStressAI_GitHub_CompleteRelease_R2\\qa\\remote_model_restore",
+  "research_executions": 0
+}
