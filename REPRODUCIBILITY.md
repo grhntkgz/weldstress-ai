@@ -1,6 +1,6 @@
 # Reproducibility and restoration
 
-The expanded private release supplies the retained bulk data and model binaries missing from the original two small archives. The file/asset manifests describe exactly what can be downloaded. `source/` exposes archived Python files unchanged for review; runnable sibling-workspace paths are restored from the release assets, not inferred from this code-only view.
+The expanded public release supplies the retained bulk data and model binaries missing from the original two small archives. The file/asset manifests describe exactly what can be downloaded. `source/` exposes archived Python files unchanged for review; runnable sibling-workspace paths are restored from the release assets, not inferred from this code-only view.
 
 ## Safe artifact-only commands
 
@@ -10,7 +10,7 @@ python tools/verify_and_restore.py --downloads downloads
 python tools/verify_and_restore.py --downloads downloads --restore restored
 ```
 
-Python 3.10+ standard library and authorized GitHub access suffice for these tools. They never import research code or start ANSYS, training, inference or optimization. They verify each archive SHA-256, exact membership, each member SHA-256 and byte size. The restorer resolves paths inside the selected destination, rejects path traversal/symlinks and refuses to replace differing files. Downloading and checking the data does not rerun scientific validation.
+Python 3.10+ standard library is required. The repository and release assets are public; the archived downloader still uses GitHub credentials, while assets can also be downloaded directly from the public release page. They never import research code or start ANSYS, training, inference or optimization. They verify each archive SHA-256, exact membership, each member SHA-256 and byte size. The restorer resolves paths inside the selected destination, rejects path traversal/symlinks and refuses to replace differing files. Downloading and checking the data does not rerun scientific validation.
 
 For the old small preparation snapshot only, `python verify_release.py` still verifies its refreshed root manifest and archived provenance. That is not a check of the large release assets.
 
@@ -36,7 +36,7 @@ Archive members preserve `outputs/<original-stage>/...` sibling layout. Registri
 | Spatial evaluation | Source/area/mask contracts and comparison/robustness tables supplied; retained published-cell arithmetic was checked in the final manuscript audit |
 | Tables/figures/manuscript | Retained outputs, source and final verified author package supplied; final audit reports state performed checks and author/journal limitations |
 
-Current conclusion: retained-artifact availability and byte integrity can be verified independently by authorized repository users. A clean end-to-end computational reproduction and independent physical stress/fatigue validation remain NOT TESTED/NOT CLAIMED. The repository remains private.
+Current conclusion: retained-artifact availability and byte integrity can be verified independently by repository users. A clean end-to-end computational reproduction and independent physical stress/fatigue validation remain NOT TESTED/NOT CLAIMED. The repository and its release assets are publicly accessible as of 24 October 2026.
 
 
 ## Original C02 mesh-pair dependency

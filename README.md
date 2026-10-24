@@ -2,7 +2,7 @@
 
 Research companion to **Geometry representation and observation context in learning stress fields from scanned welded joints**.
 
-**Private retained-artifact release.** The repository remains private; this does not establish public data/code availability. [Versioned release assets](https://github.com/grhntkgz/weldstress-ai/releases/tag/reproducibility-2026-10-24) now supply the curated bulk artifacts omitted from the original preparation snapshot. No new DOI, code/data license or scientific result is created by this delivery.
+**Public retained-artifact release (24 October 2026).** The repository and its release assets are publicly accessible following the owner’s explicit authorization. [Versioned release assets](https://github.com/grhntkgz/weldstress-ai/releases/tag/reproducibility-2026-10-24) now supply the curated bulk artifacts omitted from the original preparation snapshot. No new DOI, code/data license or scientific result is created by this delivery.
 
 ## What is supplied
 
@@ -26,7 +26,7 @@ python tools/verify_and_restore.py --downloads downloads
 python tools/verify_and_restore.py --downloads downloads --restore restored
 ```
 
-Authorized access to the private repository is required. The downloader uses `GH_TOKEN`/`GITHUB_TOKEN` or the existing Git credential helper; do not put a token in a script or commit. Restoration creates `restored/outputs/<historical-stage>/...` and refuses to overwrite different existing files. It does not run archived research scripts. Historical absolute-path guards and licensed/software dependencies remain: see the reproducibility limits before invoking any archived computational entry point.
+The repository and release assets can be accessed without repository authorization through the links above. The archived downloader currently uses `GH_TOKEN`/`GITHUB_TOKEN` or the existing Git credential helper; do not put a token in a script or commit. Restoration creates `restored/outputs/<historical-stage>/...` and refuses to overwrite different existing files. It does not run archived research scripts. Historical absolute-path guards and licensed/software dependencies remain: see the reproducibility limits before invoking any archived computational entry point.
 
 ## Scientific scope and source attribution
 

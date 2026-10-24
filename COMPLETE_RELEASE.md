@@ -40,9 +40,9 @@ All 13 registered native M1/M2 cases are included using their actual E10/E11/E12
 
 ## Scientific and implementation qualifications
 
-The original reports, receipts and manuscript availability audit describe the situation when each was issued. Their bytes are preserved rather than silently rewritten. This release subsequently adds locally retained artifacts to the same private repository. It does not change the article's numerical outcomes or make the repository public. In controlled descriptor substitutions context-point identities are fixed, but encoded context values can change. N3 Z anchoring follows the registered tile XY center; the rear datum uses the outer 10% X span on each side. The final manuscript audit documents these corrections.
+The original reports, receipts and manuscript availability audit describe the situation when each was issued. Their bytes are preserved rather than silently rewritten. This release subsequently adds locally retained artifacts to the same repository. The owner separately authorized public visibility on 24 October 2026. The article's numerical outcomes remain unchanged. In controlled descriptor substitutions context-point identities are fixed, but encoded context values can change. N3 Z anchoring follows the registered tile XY center; the rear datum uses the outer 10% X span on each side. The final manuscript audit documents these corrections.
 
-No clean-environment retraining, native solve, model inference or field-level reanalysis was performed. Artifact completeness, local archive integrity and remote byte delivery are separate from computational reproduction or physical validation. No open-source license, author approval, public distribution or DOI is inferred from upload to this private repository.
+No clean-environment retraining, native solve, model inference or field-level reanalysis was performed. Artifact completeness, local archive integrity and remote byte delivery are separate from computational reproduction or physical validation. Public access was explicitly authorized separately from the original upload. No new open-source license, article approval or DOI is inferred from this visibility change.
 
 
 ## Original C02 mesh-pair dependency
