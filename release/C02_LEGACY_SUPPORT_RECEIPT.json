@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "files": 60,
+  "archive_bytes": 33103122,
+  "uncompressed_bytes": 56803727,
+  "original_mesh_pair_declared_files_checked": 16,
+  "archive_SHA256": "a6e7352916744c7efb5081cf7ad887b37f425370df166bcb036648c18e87a8ca",
+  "originals_unchanged": true
+}

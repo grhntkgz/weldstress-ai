@@ -37,3 +37,8 @@ Archive members preserve `outputs/<original-stage>/...` sibling layout. Registri
 | Tables/figures/manuscript | Retained outputs, source and final verified author package supplied; final audit reports state performed checks and author/journal limitations |
 
 Current conclusion: retained-artifact availability and byte integrity can be verified independently by authorized repository users. A clean end-to-end computational reproduction and independent physical stress/fatigue validation remain NOT TESTED/NOT CLAIMED. The repository remains private.
+
+
+## Original C02 mesh-pair dependency
+
+The initial native C02 solver stage references the preceding R8E10R1 mesh-pair source. An additional **60 files (56,803,727 original bytes)** are preserved in the small Git-tracked `auxiliary/c02-original-mesh-source.zip` (33,103,122 compressed bytes), with per-member/ZIP hashes in `release/REPOSITORY_AUXILIARY_FILES.csv`. Both original C02 meshes, labelled MSH files, the frozen STEP and measured-source arrays match their original mesh-pair release hashes. These add to the 7,716 files in the large release assets and bring the original selected mesh-pair coverage to all 26 M1/M2 meshes. Default `tools/verify_and_restore.py` includes this repository-local auxiliary archive when verifying/restoring all assets. The original sources and results were not changed.

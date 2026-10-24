@@ -16,6 +16,8 @@ Research companion to **Geometry representation and observation context in learn
 
 See [COMPLETE_RELEASE.md](COMPLETE_RELEASE.md) for scope and exclusions, [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for restoration/dependencies, and `release/ARTIFACT_MANIFEST.csv` for every file and SHA-256. Large binaries live in the repository's GitHub Release assets, not regular Git history, following [GitHub's large-binary guidance](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 
+- Additional original C02-mesh-source dependency: 60 files in the small Git-tracked `auxiliary/c02-original-mesh-source.zip`, included automatically by the full verification/restoration command. Total retained artifact coverage: **7,776 files**; see `release/REPOSITORY_AUXILIARY_FILES.csv`.
+
 ## Download and verify — no simulation or model execution
 
 ```console

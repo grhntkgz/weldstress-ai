@@ -12,9 +12,14 @@ def main():
  with (o.manifest_dir/'ARTIFACT_MANIFEST.csv').open(encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
  by={}
  for r in rows:by.setdefault(r['asset'],{})[r['archive_member']]=r
- count=0;selected=[item for item in m['assets'] if fnmatch.fnmatchcase(item['name'],o.pattern)];assert selected,'No matching archives'
+ aux=o.manifest_dir/'REPOSITORY_AUXILIARY_FILES.csv';auxrows=[];extra={}
+ if aux.exists():
+  with aux.open(encoding='utf-8-sig',newline='') as f:auxrows=list(csv.DictReader(f))
+  for r in auxrows:
+   name=r['repository_zip'];by.setdefault(name,{})[r['archive_member']]=r;extra[name]=dict(name=name,bytes=int(r['archive_bytes']),SHA256=r['archive_SHA256'],repository_asset=True)
+ count=0;selected=[item for item in list(m['assets'])+list(extra.values()) if fnmatch.fnmatchcase(Path(item['name']).name,o.pattern)];assert selected,'No matching archives'
  for item in selected:
-  p=o.downloads/item['name'];assert p.is_file(),f'Missing {p}'
+  p=(o.manifest_dir.parent/item['name']) if item.get('repository_asset') else (o.downloads/item['name']);assert p.is_file(),f'Missing {p}'
   assert p.stat().st_size==item['bytes'] and sha(p)==item['SHA256'],f'Asset hash mismatch: {p.name}'
   with zipfile.ZipFile(p) as z:
    expected=by[item['name']];assert set(z.namelist())==set(expected),'Archive membership differs'
@@ -37,6 +42,6 @@ def main():
     count+=1
   print('VERIFIED',p.name,len(expected),flush=True)
  assert count==sum(len(by[item['name']]) for item in selected)
- if o.pattern=='*':assert count==m['files']==len(rows)
+ if o.pattern=='*':assert count==m['files']+len(auxrows)==len(rows)+len(auxrows)
  print(json.dumps(dict(status='PASS',verified_files=count,assets=len(selected),selection=o.pattern,restored_to=str(o.restore) if o.restore else None,research_executions=0),indent=2))
 if __name__=='__main__':main()

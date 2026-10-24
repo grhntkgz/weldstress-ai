@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Entire previously audited retained-artifact inventory",
+      "required": 1585,
+      "included": 1585,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen geometry paths",
+      "required": 13,
+      "included": 13,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen target paths",
+      "required": 13,
+      "included": 13,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen core paths",
+      "required": 13,
+      "included": 13,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "All canonical comparison prediction fields",
+      "required": 299,
+      "included": 299,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "All N3 checkpoints",
+      "required": 10,
+      "included": 10,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "All N1/N2 historical checkpoints",
+      "required": 20,
+      "included": 20,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "All source files in executed final stage",
+      "required": 28,
+      "included": 28,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "All X50/X43 visible context geometry inputs",
+      "required": 130,
+      "included": 130,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Native M1/M2 DB, RST and input for every specimen",
+      "required": 78,
+      "included": 78,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Selected original M1/M2 mesh files",
+      "required": 26,
+      "included": 26,
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "check": "Additional original mapping/T2/comparison arrays",
+      "required": 65,
+      "included": 65,
+      "missing": [],
+      "status": "PASS"
+    }
+  ],
+  "original_receipt_hash_comparisons": 208,
+  "receipt_hash_failures": [],
+  "files": 7776,
+  "new_research_runs": 0,
+  "scope": "Registry coverage and original receipt versus packaged source hashes; not an execution of the FE/ML pipeline."
+}

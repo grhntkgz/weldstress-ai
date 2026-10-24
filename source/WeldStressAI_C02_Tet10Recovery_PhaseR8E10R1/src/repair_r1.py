@@ -1,0 +1,33 @@
+from common_r1 import *
+from quality_r1 import *
+from scipy.optimize import minimize
+
+def freeze():
+ path=R/'04_repair_strategies/REPAIR_PREREGISTRATION.json'
+ if path.exists():return read(path)
+ local=np.load(R/'03_local_mesh_topology/LOCAL_SUPPORT.npz');L=samples_Q2();np.save(R/'04_repair_strategies/Q2_SAMPLES.npy',L)
+ p=dict(UTC=now(),source_id=SID,protocol_version=VERSION,original_mesh_SHA256=sha(R/'00_integrity/baseline/mesh.npz'),frozen_STEP_SHA256=sha(R/'01_frozen_protocol/geometry/standardized_planar_rear.step'),strategy_order=['S1','S2','S3'],S1=dict(variables='Only interior midsides of failed elements; shared positions optimized once globally; all corners and boundary nodes fixed',objective='sum(||delta_node/h_local||²); constrained SLSQP',local_support=local['affected_support_elements'].tolist(),movable_nodes=local['movable_interior_midside_indices'].tolist(),constraints='Signed inverse Frobenius condition number >=trialmargin at every Q2point in all affected elements; per-node displacement ball and box',trials=[dict(trial=1,quality_margin=.035,displacement_norm_cap_over_h=.15,maxiter=120),dict(trial=2,quality_margin=.025,displacement_norm_cap_over_h=.20,maxiter=120),dict(trial=3,quality_margin=.035,displacement_norm_cap_over_h=.25,maxiter=150)],max_trials_global=3),Q1_samples=73,Q2_samples=len(L),Q2_sample_SHA256=sha(R/'04_repair_strategies/Q2_SAMPLES.npy'),Q3='Exact rational cubic tetrahedral Bernstein determinant coefficients on affected elements where feasible; finite-sampled whole mesh remains distinct',acceptance=dict(minSICN=.02,negative_J=0,zero_J=0,nodes=350000,Tet10=230000,full_forward_P95_mm=.01,full_forward_max_mm=.04,reverse_P95_mm=.01,reverse_max_mm=.04),limits=dict(strategies=3,trials_per_strategy=3,full_new_M1=2,full_new_M2=2,native_jobs=0,AI_runs=0,workspace_GiB=12),S2='Only if S1 inapplicable or fails; boundary nodes must stay on frozen CAD and feature curves',S3='Only if S1/S2 fail; bounded local conforming cavity; no global M1 remeshing',stop='Stop optimization after first feasible independently checked local solution. Complete full-candidate counters persistent; never improve an already qualified result.')
+ write(path,p);table(R/'LOCAL_REPAIR_STRATEGY_REGISTRY.csv',[dict(strategy='S1',applicability='APPLICABLE',reason='Four interior shared midsides can move while the full boundary stays fixed',status='PREREGISTERED'),dict(strategy='S2',applicability='CONDITIONAL',reason='Only after S1 fails; on-CAD boundary optimization would be more invasive',status='NOT_EXECUTED'),dict(strategy='S3',applicability='CONDITIONAL',reason='Only after S1/S2 fail; preserve conforming cavity interface',status='NOT_EXECUTED')]);return p
+
+def optimize_interior(m,failed,label,trial_number=1):
+ protect();resource_gate(700*1024**2,1200*1024**2,200*1024**2);p=freeze();trialpath=R/'14_reproducibility/LOCAL_TRIAL_LEDGER.json';ledger=read(trialpath) if trialpath.exists() else [];assert sum(z['strategy']=='S1' for z in ledger)<3;assert label in ['M1','M2'];xx=m['xyz'];tt=m['tet10'];boundary=np.unique(m['tri6']);movable=np.setdiff1d(np.unique(tt[failed,4:]),boundary);assert len(movable)>0,'S1_INAPPLICABLE';affected=np.flatnonzero(np.isin(tt,movable).any(1));coords=xx[tt[affected]].copy();lengths=np.linalg.norm(coords[:,:4][:,:,None]-coords[:,:4][:,None,:],axis=-1);h=float(np.median(lengths[lengths>0]));L=np.load(R/'04_repair_strategies/Q2_SAMPLES.npy');dn=derivative(L);ref=next(v for v in p['S1']['trials'] if v['trial']==trial_number);margin=ref['quality_margin'];cap=ref['displacement_norm_cap_over_h'];positions=[np.where(tt[affected]==node) for node in movable]
+ trial_id='S1_'+label+'_'+str(len(ledger)+1);entry=dict(UTC=now(),trial_id=trial_id,strategy='S1',mesh_level=label,status='STARTED',movable_node_count=len(movable),affected_elements=len(affected),h_mm=h,quality_margin=margin,displacement_cap_mm=cap*h);ledger.append(entry);write(trialpath,ledger);start=time.perf_counter();calls=[0]
+ # Center coordinates before evaluating Jacobians to reduce cancellation during finite differences.
+ base=coords-coords[:,:4].mean(1)[:,None,:]
+ def placed(v):
+  co=base.copy();delta=v.reshape(-1,3)*h
+  for k,(ee,nn) in enumerate(positions):co[ee,nn]+=delta[k]
+  return co
+ def constraint(v):
+  co=placed(v);J=np.einsum('eia,qib->eqab',co[:,NATIVE_PERM],dn);calls[0]+=1;return np.r_[(sicn_J(J)-margin).ravel(),cap**2-np.sum(v.reshape(-1,3)**2,axis=1)]
+ n=3*len(movable);res=minimize(lambda v:float(v@v),np.zeros(n),jac=lambda v:2*v,method='SLSQP',bounds=[(-cap,cap)]*n,constraints=[dict(type='ineq',fun=constraint)],options=dict(maxiter=ref['maxiter'],ftol=1e-10,disp=False));delta=res.x.reshape(-1,3)*h;candidate_coords=coords.copy()
+ for k,(ee,nn) in enumerate(positions):candidate_coords[ee,nn]+=delta[k]
+ det,sicn=custom_quality(candidate_coords,L);inddet,indq=scalar_checks(candidate_coords,samples_Q1());det1,qq=custom_quality(candidate_coords,samples_Q1());assert abs(inddet-det1).max()<1e-10 and abs(indq-qq).max()<1e-9;feasible=bool((det>0).all() and sicn.min()>=.02 and np.linalg.norm(delta,axis=1).max()<=cap*h+1e-8)
+ f=R/'05_local_repair_trials'/trial_id;f.mkdir(parents=True,exist_ok=True);np.savez_compressed(f/'LOCAL_PROTOTYPE.npz',node_indices=movable,old_coordinates=xx[movable],new_coordinates=xx[movable]+delta,displacements=delta,affected_element_indices=affected,local_Q2_det=det,local_Q2_SICN=sicn,Q2_samples=L)
+ entry.update(status='LOCAL_FEASIBLE' if feasible else 'LOCAL_FAILED',optimizer_success=bool(res.success),message=str(res.message),iterations=int(res.nit),objective=float(res.fun),maximum_displacement_mm=float(np.linalg.norm(delta,axis=1).max()),min_Q2_detJ_mm3=float(det.min()),min_Q2_SICN=float(sicn.min()),independent_det_max_difference_mm3=float(abs(inddet-det1).max()),independent_SICN_max_difference=float(abs(indq-qq).max()),elapsed_s=time.perf_counter()-start,constraint_evaluations=calls[0],complete_mesh_generated=False);write(trialpath,ledger);write(f/'TRIAL_RECEIPT.json',entry);table(R/'LOCAL_REPAIR_TRIALS.csv',ledger)
+ print('LOCAL_REPAIR',entry,flush=True);return dict(feasible=feasible,trial_id=trial_id,movable=movable,new=xx[movable]+delta,affected=affected,receipt=entry)
+
+def main():
+ protect();assert read(R/'ORIGINAL_FAILURE_METRICS.json')['H3_curvature_induced']=='VERIFIED';m=dict(np.load(R/'00_integrity/baseline/mesh.npz'));failed=np.array([4560,11398]);result=optimize_interior(m,failed,'M1',1)
+ if result['feasible']:write(R/'04_repair_strategies/SELECTED_M1_LOCAL_TRIAL.json',dict(trial_id=result['trial_id'],status='LOCAL_ONLY;GLOBAL_ACCEPTANCE_PENDING'))
+if __name__=='__main__':main()
