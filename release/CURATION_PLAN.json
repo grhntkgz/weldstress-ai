@@ -1,0 +1,159 @@
+{
+  "source_files": 7716,
+  "source_bytes": 17668829985,
+  "categories": {
+    "geometry-targets": {
+      "files": 520,
+      "bytes": 2696501150
+    },
+    "models": {
+      "files": 35,
+      "bytes": 14602063
+    },
+    "predictions": {
+      "files": 299,
+      "bytes": 267525854
+    },
+    "methods-results": {
+      "files": 3339,
+      "bytes": 686889553
+    },
+    "factorial": {
+      "files": 832,
+      "bytes": 608206073
+    },
+    "features": {
+      "files": 156,
+      "bytes": 545024156
+    },
+    "native-C02-V1-S355-AW": {
+      "files": 6,
+      "bytes": 655166799
+    },
+    "native-G08-V1-S355-AW": {
+      "files": 6,
+      "bytes": 619389757
+    },
+    "native-X10-V1-S355-AW": {
+      "files": 6,
+      "bytes": 622142318
+    },
+    "native-X23-V1-S355-AW": {
+      "files": 6,
+      "bytes": 626402130
+    },
+    "native-G25-V1-S355-AW": {
+      "files": 6,
+      "bytes": 644555616
+    },
+    "native-C05-V1-S355-AW": {
+      "files": 6,
+      "bytes": 652157939
+    },
+    "native-G04-V1-S355-AW": {
+      "files": 6,
+      "bytes": 634725230
+    },
+    "native-E21-V1-S355-AW": {
+      "files": 6,
+      "bytes": 641672081
+    },
+    "native-H12-V1-S355-AW": {
+      "files": 6,
+      "bytes": 645211060
+    },
+    "native-C16-V1-S355-AW": {
+      "files": 6,
+      "bytes": 643703697
+    },
+    "native-H19-V1-S355-AW": {
+      "files": 6,
+      "bytes": 641540988
+    },
+    "native-G16-V1-S355-AW": {
+      "files": 6,
+      "bytes": 632300419
+    },
+    "native-G07-V1-S355-AW": {
+      "files": 6,
+      "bytes": 622470019
+    },
+    "figures": {
+      "files": 501,
+      "bytes": 361514122
+    },
+    "fe-support": {
+      "files": 1890,
+      "bytes": 3952793013
+    },
+    "manuscript": {
+      "files": 1,
+      "bytes": 54204931
+    },
+    "fe-recovery-arrays": {
+      "files": 65,
+      "bytes": 200131017
+    }
+  },
+  "cohort_cases": [
+    {
+      "source_id": "C02-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_C02_NativeV1_PhaseR8E10R2"
+    },
+    {
+      "source_id": "G08-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_G08X10_NativeV1_PhaseR8E10R3\\cases\\G08-V1-S355-AW"
+    },
+    {
+      "source_id": "X10-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_G08X10_NativeV1_PhaseR8E10R3\\cases\\X10-V1-S355-AW"
+    },
+    {
+      "source_id": "X23-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_Expansion_PhaseR8E11R1\\cases\\X23-V1-S355-AW"
+    },
+    {
+      "source_id": "G25-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_Expansion_PhaseR8E11R1\\cases\\G25-V1-S355-AW"
+    },
+    {
+      "source_id": "C05-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_Expansion_PhaseR8E11R1\\cases\\C05-V1-S355-AW"
+    },
+    {
+      "source_id": "G04-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_Expansion_PhaseR8E11R1\\cases\\G04-V1-S355-AW"
+    },
+    {
+      "source_id": "E21-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_Expansion_PhaseR8E11R1\\cases\\E21-V1-S355-AW"
+    },
+    {
+      "source_id": "H12-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_StagedExpansion_PhaseR8E12\\cases\\H12-V1-S355-AW"
+    },
+    {
+      "source_id": "C16-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_StagedExpansion_PhaseR8E12\\cases\\C16-V1-S355-AW"
+    },
+    {
+      "source_id": "H19-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_StagedExpansion_PhaseR8E12\\cases\\H19-V1-S355-AW"
+    },
+    {
+      "source_id": "G16-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_StagedExpansion_PhaseR8E12\\cases\\G16-V1-S355-AW"
+    },
+    {
+      "source_id": "G07-V1-S355-AW",
+      "case_path": "E:\\welding\\outputs\\WeldStressAI_V1_StagedExpansion_PhaseR8E12\\cases\\G07-V1-S355-AW"
+    }
+  ],
+  "exclusions": [
+    "Original third-party raw dataset archive: use DOI 10.25835/0dojws6u, CC BY 4.0",
+    "Unrelated historical campaigns, transient solver scratch/lock files, virtual environments and obsolete document render caches",
+    "Legacy shifted-context/stitching arrays and long-form CSV duplicates outside the retained article comparison; all 299 canonical comparison fields and 832 factorial fields included",
+    "No new numerical results or rebuilt models"
+  ],
+  "new_research_runs": 0
+}

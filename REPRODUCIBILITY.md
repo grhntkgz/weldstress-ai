@@ -1,17 +1,39 @@
-# Reproducibility scope
+# Reproducibility and restoration
 
-## Available now
+The expanded private release supplies the retained bulk data and model binaries missing from the original two small archives. The file/asset manifests describe exactly what can be downloaded. `source/` exposes archived Python files unchanged for review; runnable sibling-workspace paths are restored from the release assets, not inferred from this code-only view.
 
-The archives provide original research Python source, released tables and explicit definitions of model architecture, original vertex areas, area-weighted errors, High95 thresholds, grouped evaluation and the retained robustness contracts. `verify_release.py` checks repository bytes, source/export provenance and ZIP integrity without importing or executing the archived code.
+## Safe artifact-only commands
 
-R8E16 `model_e3.py` contains the executed SurfacePT forward override; `base_arch.py` supplies its parent layers. Other model classes in that parent module are historical definitions, not additional experiments in this article. Read `N3_ARCHITECTURE_AND_TRAINING.json` for the actual 19-input, width-24, one-block, 7,228-parameter model, two fixed seeds and final-epoch checkpoint policy.
+```console
+python tools/download_artifacts.py --destination downloads
+python tools/verify_and_restore.py --downloads downloads
+python tools/verify_and_restore.py --downloads downloads --restore restored
+```
 
-The recorded neural environment uses CPU PyTorch 2.6.0. The separate B2 environment uses XGBoost 3.0.2, scikit-learn 1.6.1 and NumPy 2.2.6. This is descriptive environment information, not a tested portable dependency lock. Python packages used by historical modules also include NumPy, pandas, SciPy, matplotlib and psutil; document-generation modules may require python-docx. Do not install or run those modules to perform the standard-library integrity check.
+Python 3.10+ standard library and authorized GitHub access suffice for these tools. They never import research code or start ANSYS, training, inference or optimization. They verify each archive SHA-256, exact membership, each member SHA-256 and byte size. The restorer resolves paths inside the selected destination, rejects path traversal/symlinks and refuses to replace differing files. Downloading and checking the data does not rerun scientific validation.
 
-## Not yet a standalone end-to-end package
+For the old small preparation snapshot only, `python verify_release.py` still verifies its refreshed root manifest and archived provenance. That is not a check of the large release assets.
 
-Archived code assumes the original sibling-workspace layout (R8E12, R8E13, R8E14, R8E15, R8E16 and manuscript-assessment workspaces), frozen protocol seals and geometry/target/prediction arrays. Source files are retained byte-for-byte so those historical dependencies remain visible. Local-drive guards and resource thresholds are not portable configuration. The research-source archive is an audit/code archive, not a one-command reproduction claim.
+## Historical environments and path dependencies
 
-Complete retraining, field-level metric recomputation, native FE reproduction and checkpoint inference cannot be reproduced solely from this first repository snapshot. They need separately curated and licensed original artifacts, a dependency map, download locations and environment validation. No trained checkpoint is being advertised as included merely because its registry is included.
+The recorded neural environment uses CPU PyTorch 2.6.0. The separate B2 environment records XGBoost 3.0.2, scikit-learn 1.6.1 and NumPy 2.2.6. Source also uses NumPy, SciPy, pandas, matplotlib and psutil; CAD/meshing/native extraction stages additionally require their historical CAD/Gmsh/ANSYS environments and licenses. Retained configuration, source and environment reports are supplied. These records are not a tested portable lockfile.
 
-Before a public version, the author must decide the distribution scope, rights/license and access mechanism for required bulk artifacts; test the intended entry points in a separate directory; and record a fixed version tag and full commit SHA. Do not overwrite frozen research outputs, tune on historical tests or launch a new scientific campaign as part of publication preparation.
+Archive members preserve `outputs/<original-stage>/...` sibling layout. Registries and guards retain historical `E:/welding/outputs` paths and stage-specific expectations; restoration elsewhere alone does not port these entry points. Do not run archived campaign/solver entry points as a smoke test. A future separately authorized portability effort should use a new workspace, map paths explicitly, validate dependency imports, and preserve held-out splits and closed outcomes.
+
+## Verified level by stage
+
+| Stage | Retained material / verified limit |
+|---|---|
+| Geometry preparation | Processed XYZ/IDs/triangles/T0 and context arrays supplied; original raw archive external, independent raw registration unresolved |
+| FE construction | M1/M2 native inputs/databases, meshes, processed solids, BVP and quality/qualification records supplied; fresh native build/solve not executed |
+| Native stress extraction | Native results and processing/mapping source supplied; clean-environment extraction not executed |
+| T2 construction | Frozen references, source weights/IDs and operator/qualification records supplied; no new reference field produced |
+| Features | Feature arrays, context geometry, original query/core and source definitions supplied; no fresh full regeneration |
+| Neural training | 30 final N1/N2/N3 checkpoints, seed/fold/config/training records supplied; no retraining or bitwise-training certification |
+| Neural inference | Source, retained checkpoints and canonical predictions supplied; no fresh model execution during release |
+| XGBoost | Five models, source/config/sample/prediction records supplied; no new inference |
+| Controlled substitutions | All 832 fields and source/contracts supplied; no new interventions |
+| Spatial evaluation | Source/area/mask contracts and comparison/robustness tables supplied; retained published-cell arithmetic was checked in the final manuscript audit |
+| Tables/figures/manuscript | Retained outputs, source and final verified author package supplied; final audit reports state performed checks and author/journal limitations |
+
+Current conclusion: retained-artifact availability and byte integrity can be verified independently by authorized repository users. A clean end-to-end computational reproduction and independent physical stress/fatigue validation remain NOT TESTED/NOT CLAIMED. The repository remains private.

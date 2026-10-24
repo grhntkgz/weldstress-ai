@@ -2,42 +2,32 @@
 
 Research companion to **Geometry representation and observation context in learning stress fields from scanned welded joints**.
 
-**Status: private preparation snapshot.** This repository is not yet a public, versioned scientific release. No repository DOI has been requested. No new FE calculation, training, inference or scientific metric computation was performed while preparing it.
+**Private retained-artifact release.** The repository remains private; this does not establish public data/code availability. [Versioned release assets](https://github.com/grhntkgz/weldstress-ai/releases/tag/reproducibility-2026-10-24) now supply the curated bulk artifacts omitted from the original preparation snapshot. No new DOI, code/data license or scientific result is created by this delivery.
 
-The study concerns thirteen processed measured weld fronts from five documentary parent-plate groups. The numerical FE solid assumes a planar rear, isotropic linear elasticity (E = 210 GPa, Poisson ratio 0.30), and standardized nominal tension of 100 MPa. T2 is a declared original-area-weighted numerical tensile maximum-principal-stress reference; it is not an experimental stress measurement or a validated physical weld-toe stress.
+## What is supplied
 
-## Contents
+- 7,716 retained files, 17.669 GB before ZIP compression, in 31 independently verifiable data archives.
+- Original processed front geometries, original point IDs/areas/triangles, FULL/X50/X43 context geometry, query/core arrays and N3 features for the thirteen-specimen article cohort.
+- 30 frozen N1/N2/N3 neural checkpoints, five XGBoost models, configurations, splits, seeds, training records and source.
+- All 299 canonical article comparison prediction fields and 832 factorial prediction fields; numerical FE/T2 references, metric and robustness tables.
+- All thirteen specimens' retained M1/M2 ANSYS databases, result files and input decks, supporting processed solids/mesh/mapping/BVP/qualification records.
+- Final revised manuscript DOCX/PDF, actual G07 point-cloud and executed-M2 figures, final source/reference/document audits and SHA-256 evidence (inside `manuscript-01.zip`).
+- Readable retained Python source under `source/`, in addition to the unchanged original two small snapshot ZIPs.
 
-| File | Scope |
-|---|---|
-| `research-source.zip` | Original archived Python source for R8E16 and the R2.1 robustness assessment, with source hashes |
-| `derived-tables-and-contracts.zip` | 42 existing supplementary CSV tables, method contracts, and selected checkpoint/training/prediction registries |
-| `SOURCE_PROVENANCE.csv` | Original source hashes, exported hashes and disclosed path-only transformations |
-| `MANIFEST_SHA256.csv` | SHA-256 checksums for this repository snapshot |
-| `verify_release.py` | Standard-library integrity and archive-member verification; does not execute research code |
-| `REPRODUCIBILITY.md` | What is and is not reproducible from this first snapshot |
-| `DATA_SOURCES.md` | Experimental source attribution and distinction from derived FE/model data |
-| `AVAILABILITY_DRAFT.md` | Current honest availability wording and a conditional public-release template |
-| `CITATION.md` | Citation guidance without a new DOI |
+See [COMPLETE_RELEASE.md](COMPLETE_RELEASE.md) for scope and exclusions, [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for restoration/dependencies, and `release/ARTIFACT_MANIFEST.csv` for every file and SHA-256. Large binaries live in the repository's GitHub Release assets, not regular Git history, following [GitHub's large-binary guidance](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 
-## Verify and unpack
-
-Use Python 3.10 or newer. No scientific packages are needed for the integrity check:
+## Download and verify — no simulation or model execution
 
 ```console
-python verify_release.py
-python -m zipfile -e research-source.zip research-source
-python -m zipfile -e derived-tables-and-contracts.zip derived-data
+python tools/download_artifacts.py --destination downloads
+python tools/verify_and_restore.py --downloads downloads
+python tools/verify_and_restore.py --downloads downloads --restore restored
 ```
 
-Do not run archived campaign/training/solver entry points as a repository smoke test. They retain the original multi-workspace dependencies and output-writing behavior. Read `REPRODUCIBILITY.md` first.
+Authorized access to the private repository is required. The downloader uses `GH_TOKEN`/`GITHUB_TOKEN` or the existing Git credential helper; do not put a token in a script or commit. Restoration creates `restored/outputs/<historical-stage>/...` and refuses to overwrite different existing files. It does not run archived research scripts. Historical absolute-path guards and licensed/software dependencies remain: see the reproducibility limits before invoking any archived computational entry point.
 
-## Scientific scope
+## Scientific scope and source attribution
 
-The retained conclusion is **METHOD_IMPROVEMENT_MIXED**: N3 improves aggregate relative High95 localization compared with N2 while increasing whole-field L2 and worsening absolute peak-amplitude error. Adverse X-group, seed, threshold and regional comparisons remain included. These reused documentary groups do not provide fresh independent generalization validation. No physical stress or fatigue-life validation is claimed. Research remains closed.
+The article uses thirteen processed measured weld fronts from five documentary groups, two fixed seeds, an assumed planar rear, isotropic linear elasticity E=210 GPa and ν=0.30, and standardized nominal tension 100 MPa. T2 is a declared numerical area-weighted tensile-principal-stress reference, not an experimentally measured stress or physically validated weld-toe stress. The conclusion remains **METHOD_IMPROVEMENT_MIXED**: relative localization improves in aggregate while whole-field and peak-amplitude errors worsen; group-X and extreme-threshold failures remain included. Previously examined groups do not establish fresh independent generalization or fatigue-life validation.
 
-The original experimental repository retains its existing DOI; our code/data snapshot has no DOI. Once a public reviewed version exists, cite its repository URL, version tag and full commit identifier. A private link alone does not establish public availability.
-
-## Rights and preparation status
-
-Original scans are linked rather than redistributed here. Code and derived-data licensing has not yet been selected by the rights holders. No new open-source reuse permission is asserted for this preparation snapshot. See `RIGHTS_AND_RELEASE_STATUS.md`. The unpublished article, title page, private author documents, native ANSYS databases/results, complete geometry caches and model binaries are not included.
+Original source scans/experimental metadata are linked via [Dänekas, version 1.0, DOI 10.25835/0dojws6u](https://doi.org/10.25835/0dojws6u), CC BY 4.0. The original third-party raw archive is not mirrored. No new FE solve, meshing, training, inference or optimization was executed while preparing this release. See [DATA_SOURCES.md](DATA_SOURCES.md), [RIGHTS_AND_RELEASE_STATUS.md](RIGHTS_AND_RELEASE_STATUS.md) and [AVAILABILITY_DRAFT.md](AVAILABILITY_DRAFT.md).

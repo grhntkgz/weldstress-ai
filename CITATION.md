@@ -1,7 +1,7 @@
-# Citation without a new DOI
+# Citation and version identification
 
-This preparation snapshot has no repository DOI and no published release tag. Do not invent either. For a future reviewed public snapshot cite:
+Repository: https://github.com/grhntkgz/weldstress-ai. Retained artifact version: `reproducibility-2026-10-24`. Use the full tagged commit and access date when citing an authorized accessible copy. This private release has no new DOI and is not publicly accessible.
 
-*WeldStress AI: research code and derived result tables*, GitHub repository, https://github.com/grhntkgz/weldstress-ai, exact release tag, full commit SHA, and access date.
+Original measurements: Christian Dänekas, *Research Data on Fatigue Tests of As-Welded, Deep-Rolled, and HFMI-Treated Joints*, LUIS version 1.0 (2025), DOI 10.25835/0dojws6u. Cite this dataset separately from project-derived FE stresses and AI outputs.
 
-The rights holders must confirm the author/contributor list before a structured CITATION.cff or publication citation is finalized. Repository ownership is not an assertion of sole scientific authorship. Cite the original experimental dataset separately using DOI 10.25835/0dojws6u. Do not attribute the project's FE stress fields to that experimental repository as measured data.
+The rights holders must confirm the scientific author/contributor list before publication citation or CITATION.cff metadata are finalized. Repository ownership alone is not a sole-authorship claim. No authorship, funding or competing-interest statement is invented by this delivery.

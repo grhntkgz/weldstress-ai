@@ -1,15 +1,7 @@
-# Data and code availability wording
+# Actual availability after the expanded private upload
 
-## Accurate current status (private preparation)
+**Data availability.** Original experimental scans and metadata are publicly available from Dänekas, LUIS version 1.0, https://doi.org/10.25835/0dojws6u, under CC BY 4.0. Project-derived processed geometry, numerical FE/T2 references, predictions and evaluation records are retained in the private companion repository https://github.com/grhntkgz/weldstress-ai and its release `reproducibility-2026-10-24`. These project artifacts are not currently publicly accessible. The numerical stresses and predictions are not experimental measurements from the source dataset.
 
-**Data availability.** The original experimental scans and metadata are available from Dän­ekas, version 1.0, https://doi.org/10.25835/0dojws6u. Derived result tables and computational provenance are being curated in a private companion repository. They are not currently claimed to be publicly accessible. Numerical FE references and learned predictions are derived artifacts, not experimental stress measurements.
+**Code availability.** Archived FE preparation/postprocessing, feature extraction, SurfacePT and XGBoost training/inference, evaluation and plotting source, configurations and retained trained-model binaries are held in the same private repository/release. The manifests and restoration tools identify the supplied artifacts and remaining historical path/software/license dependencies. A fresh portable end-to-end reproduction has not been executed. Public code availability is not asserted.
 
-**Code availability.** The executed research source and method contracts are preserved in a private companion repository. A public, versioned code release has not yet been finalized. The present preparation snapshot is not a standalone end-to-end reproduction package.
-
-## Conditional template — use only after actual public release and access verification
-
-**Data availability.** The original experimental scans and metadata are available from Dän­ekas, version 1.0, https://doi.org/10.25835/0dojws6u. Derived tabulated results, method contracts and provenance records supporting this article are available at https://github.com/grhntkgz/weldstress-ai, at the specific version and full commit identifier cited in the final article. The release documentation states which bulk geometry, numerical reference, prediction and checkpoint files are included or available separately; access is not asserted for unprovided artifacts.
-
-**Code availability.** The archived research source and associated method definitions are available at the same versioned repository. The release documentation describes required dependencies and input artifacts, tested entry points and remaining reproduction limitations.
-
-Do not paste the conditional wording into a submitted article while the repository is private. Do not substitute a moving main-branch URL for the actual scientific version identifier. No new DOI is requested; the original dataset DOI remains unchanged.
+This is a truthful current-status draft, not a claim that the protected manuscript DOCX has been edited again or that the author approved public sharing/on-request commitments. Do not use public-release wording until an explicitly authorized visibility/license/access change is actually verified. No new DOI is asserted.

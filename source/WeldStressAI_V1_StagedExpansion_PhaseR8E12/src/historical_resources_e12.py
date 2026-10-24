@@ -1,0 +1,10 @@
+from setup_e11r1 import *
+def main():
+ h1=B/'WeldStressAI_V1_Expansion_PhaseR8E11R1';h2=B/'WeldStressAI_C02_NativeV1_PhaseR8E10R2';data=[]
+ for a in rows(R/'VERIFIED_V1_SOURCE_REGISTRY.csv'):
+  sid=a['source_id'];c=h2 if sid.startswith('C02') else H3/'cases'/sid if sid.startswith(('G08','X10')) else h1/'cases'/sid
+  for level,fol in [('M1','06_native_M1'),('M2','07_native_M2')]:
+   native=c/fol;rr=rows(native/'RESOURCES.csv');files=list(p for p in native.rglob('*') if p.is_file());data.append(dict(source_id=sid,level=level,archive_directory=str(native),retained_native_directory_bytes=sum(p.stat().st_size for p in files),retained_solver_state_scratch_bytes=sum(p.stat().st_size for p in files if p.suffix.lower() in ['.esav','.full','.emat','.pcg','.pcs']),largest_retained_file_bytes=max(p.stat().st_size for p in files),sampled_native_job_RSS_max_bytes=max(int(b['job_RSS_bytes']) for b in rr),sampled_native_job_private_max_bytes=max(int(b['job_private_bytes']) for b in rr),sampled_phase_workspace_max_bytes=max(int(b['workspace_bytes']) for b in rr),transient_job_scratch_peak='NOT_CONTINUOUSLY_MEASURED',sampling_scope='Wholehistoricalphase workspace, not isolated job-scratch-only measurement'))
+ table(R/'04_resource_preflight/HISTORICAL_EIGHT_SOURCE_RESOURCES.csv',data);write(R/'04_resource_preflight/HISTORICAL_SCRATCH_AUDIT.json',dict(UTC=now(),sources=8,native_jobs=16,max_retained_native_directory_bytes=max(a['retained_native_directory_bytes'] for a in data),max_retained_native_state_scratch_bytes=max(a['retained_solver_state_scratch_bytes'] for a in data),max_sampled_worker_RSS_bytes=max(a['sampled_native_job_RSS_max_bytes'] for a in data),instantaneous_transient_scratch_peak='UNAVAILABLE;not invented',forecast_policy='Wholearchive scaling includes retained native outputs;additional0.25GiB transient allowance;4GiBfailedretention maintained',C_native_executable='C:/Program Files/ANSYS Inc/v231/ansys/bin/winx64/ANSYS231.exe',controlled_TEMP_TMP_and_native_outputs=str(R),unrelated_C_temporary_IO='Not traced; C system volume monitored with2GiBreserve'))
+ print('EIGHT_SOURCE_RESOURCE_EVIDENCE_WRITTEN')
+if __name__=='__main__':main()

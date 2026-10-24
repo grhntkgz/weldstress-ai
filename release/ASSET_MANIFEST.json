@@ -1,0 +1,226 @@
+{
+  "tag": "reproducibility-2026-10-24",
+  "repository": "grhntkgz/weldstress-ai",
+  "assets": [
+    {
+      "name": "factorial-01.zip",
+      "bytes": 521009437,
+      "SHA256": "6a0f3eb9b25d06d89e050a852dca92f4d82735246eabac5a2bf6bc2371595db2",
+      "files": 832,
+      "source_bytes": 608206073
+    },
+    {
+      "name": "fe-support-01.zip",
+      "bytes": 243796220,
+      "SHA256": "9bf35f740c00ad49705e3a48d6d4d99351ee1b2fe77ff1b7faf7516b58849220",
+      "files": 404,
+      "source_bytes": 727977732
+    },
+    {
+      "name": "fe-support-02.zip",
+      "bytes": 303409600,
+      "SHA256": "a152fbe4188cbde4f48ccc3f0db530a6e0ef173b00b6c73d93e66f87049cfe14",
+      "files": 338,
+      "source_bytes": 729501120
+    },
+    {
+      "name": "fe-support-03.zip",
+      "bytes": 261172556,
+      "SHA256": "160815966a30ccb54dbd4920ea962c837fc8589cf8bd35eb9e4843e59d2b4627",
+      "files": 330,
+      "source_bytes": 722750525
+    },
+    {
+      "name": "fe-support-04.zip",
+      "bytes": 289004915,
+      "SHA256": "cd3ac1e9b74cf8320a35307518a6e9a85b59651bdb141fe3a35799d1c908e4a8",
+      "files": 319,
+      "source_bytes": 733318702
+    },
+    {
+      "name": "fe-support-05.zip",
+      "bytes": 292161525,
+      "SHA256": "2e664098df58d0c7ac3b5ccc504bdf34b91b4180e813d58acbc806243b5bce78",
+      "files": 356,
+      "source_bytes": 707756401
+    },
+    {
+      "name": "fe-support-06.zip",
+      "bytes": 143799559,
+      "SHA256": "169e34f6e4615ebc3ab901b2152c859dbf17684077865d1d257a18c94a729ac9",
+      "files": 143,
+      "source_bytes": 331488533
+    },
+    {
+      "name": "features-01.zip",
+      "bytes": 255377802,
+      "SHA256": "6cb44a5dd6517fdccb45651eac0d41ac4539c08f945903c623ef029f76a7b628",
+      "files": 156,
+      "source_bytes": 545024156
+    },
+    {
+      "name": "figures-01.zip",
+      "bytes": 322002122,
+      "SHA256": "5c01cc785bb8664566174b4a0586006af98998bde5d1439f3d2e5fd1d67027ef",
+      "files": 501,
+      "source_bytes": 361514122
+    },
+    {
+      "name": "geometry-targets-01.zip",
+      "bytes": 297898169,
+      "SHA256": "3a6efebbe896cbf8ad108c46ffed45c4210fa088c50a7bc28336e900d2912ea2",
+      "files": 124,
+      "source_bytes": 721058331
+    },
+    {
+      "name": "geometry-targets-02.zip",
+      "bytes": 299044624,
+      "SHA256": "99e3c780216157d41776ba8ca0d1b36c3a3046254785bd22d7c01b99023335bc",
+      "files": 123,
+      "source_bytes": 722367702
+    },
+    {
+      "name": "geometry-targets-03.zip",
+      "bytes": 299858768,
+      "SHA256": "585ad8f8ce4c4942f4a7f24ba9745a8693711f227e0f5744aa1316fd7ebcd593",
+      "files": 123,
+      "source_bytes": 722367702
+    },
+    {
+      "name": "geometry-targets-04.zip",
+      "bytes": 229450467,
+      "SHA256": "6d0ab6a737f98965cde366d29295cac51264bfffd0ddb2f2e1d6013087369989",
+      "files": 150,
+      "source_bytes": 530707415
+    },
+    {
+      "name": "manuscript-01.zip",
+      "bytes": 54211280,
+      "SHA256": "30147fa5801042c434f96f67c0bd28658061b6dc19f9219baec66f7f05d94061",
+      "files": 1,
+      "source_bytes": 54204931
+    },
+    {
+      "name": "methods-results-01.zip",
+      "bytes": 160652534,
+      "SHA256": "6238f0a984610c5c220f8d9cc21873133d1860e6fedd851571a5cc1e6e4f02aa",
+      "files": 3339,
+      "source_bytes": 686889553
+    },
+    {
+      "name": "models-01.zip",
+      "bytes": 6469918,
+      "SHA256": "d5976f330c8fcaab76fd44f77446808e38e09a9f4b5e152a5078d2e0798cad55",
+      "files": 35,
+      "source_bytes": 14602063
+    },
+    {
+      "name": "native-C02-V1-S355-AW-01.zip",
+      "bytes": 333107503,
+      "SHA256": "9bf3435876c8d3c1032d8a58c7805514abe233c31545b825e137deef549e5d8e",
+      "files": 6,
+      "source_bytes": 655166799
+    },
+    {
+      "name": "native-C05-V1-S355-AW-01.zip",
+      "bytes": 331864107,
+      "SHA256": "80c948906ecf1935c6bdf62298b12f47cfc029dbb285b3866e9f7986656bf716",
+      "files": 6,
+      "source_bytes": 652157939
+    },
+    {
+      "name": "native-C16-V1-S355-AW-01.zip",
+      "bytes": 327410370,
+      "SHA256": "1cfc30c15af5fe1f8a411e9d63f87696871adf40806ca58eba700e1de9a86419",
+      "files": 6,
+      "source_bytes": 643703697
+    },
+    {
+      "name": "native-E21-V1-S355-AW-01.zip",
+      "bytes": 326637431,
+      "SHA256": "a58e8bacf0a0b5d2253734c266b2ff58c4db320e0b62d622a535be43f0fc9e8f",
+      "files": 6,
+      "source_bytes": 641672081
+    },
+    {
+      "name": "native-G04-V1-S355-AW-01.zip",
+      "bytes": 322750180,
+      "SHA256": "676682fd80f1dbae070423a32aba6ca3c6c64219c368fbc190194c13e7b5452c",
+      "files": 6,
+      "source_bytes": 634725230
+    },
+    {
+      "name": "native-G07-V1-S355-AW-01.zip",
+      "bytes": 316253590,
+      "SHA256": "1f737e7cae30be38d8d3ed2d74619a6398da6b2ce72ce39727e6490dbe724ecd",
+      "files": 6,
+      "source_bytes": 622470019
+    },
+    {
+      "name": "native-G08-V1-S355-AW-01.zip",
+      "bytes": 314727307,
+      "SHA256": "eaa100b0e1a3080792e71b55964c5c9690159ef7d74b9dd5e3963356d8320f06",
+      "files": 6,
+      "source_bytes": 619389757
+    },
+    {
+      "name": "native-G16-V1-S355-AW-01.zip",
+      "bytes": 321763906,
+      "SHA256": "ff0a76e15987c9183cca98b2efe43e88ad0398f053db683505d7c47f0787fd66",
+      "files": 6,
+      "source_bytes": 632300419
+    },
+    {
+      "name": "native-G25-V1-S355-AW-01.zip",
+      "bytes": 327546265,
+      "SHA256": "7e64f02f3be99b06e212b54374bd3dbcc2677990b4a7240201a37e2a3ba6e021",
+      "files": 6,
+      "source_bytes": 644555616
+    },
+    {
+      "name": "native-H12-V1-S355-AW-01.zip",
+      "bytes": 328524472,
+      "SHA256": "9ff466ddd335ae35eacee8235d79e9e38c226636fa7d7840fd8d9832cdcd711b",
+      "files": 6,
+      "source_bytes": 645211060
+    },
+    {
+      "name": "native-H19-V1-S355-AW-01.zip",
+      "bytes": 326303008,
+      "SHA256": "39cddeb75b96142fe90fd2a5a60e399ed81a4625784882194c4cfcd3b3b036d0",
+      "files": 6,
+      "source_bytes": 641540988
+    },
+    {
+      "name": "native-X10-V1-S355-AW-01.zip",
+      "bytes": 316463504,
+      "SHA256": "a22db390d97b48d4604297f6947bc73cde76365d1ef54b75e6592fa5340dfdb2",
+      "files": 6,
+      "source_bytes": 622142318
+    },
+    {
+      "name": "native-X23-V1-S355-AW-01.zip",
+      "bytes": 318043667,
+      "SHA256": "83d6df1c82a5c3afa99d9406604261c1c2342653af67724c0b1982aaa3fe689a",
+      "files": 6,
+      "source_bytes": 626402130
+    },
+    {
+      "name": "predictions-01.zip",
+      "bytes": 174787231,
+      "SHA256": "af834ac98de8dd5fae41403ac7066c4e7c26683f5c9023537f97bda6be171182",
+      "files": 299,
+      "source_bytes": 267525854
+    },
+    {
+      "name": "fe-recovery-arrays-01.zip",
+      "bytes": 189737909,
+      "SHA256": "cd2ea4e41af6b17d9624d9f88b6f9787aecd2fb1463472b17b4faf95d33df972",
+      "files": 65,
+      "source_bytes": 200131017
+    }
+  ],
+  "files": 7716,
+  "source_bytes": 17668829985,
+  "new_research_runs": 0
+}
